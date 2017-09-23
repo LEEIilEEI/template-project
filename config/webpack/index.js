@@ -14,7 +14,7 @@ function getEntries() {
     const files = fs.readdirSync(path.resolve(__dirname, ENV_PATH.ENTRY, app))
 
     files.filter(file => {
-      return /\.js$/i.test(file)
+      return /\index\.js$/i.test(file)
     }).forEach(file => {
       file = file.replace(/\.js/, '')
 
