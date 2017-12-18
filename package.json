@@ -6,7 +6,7 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
     "dev": "egg-bin dev",
-    "start": "egg-scripts start --port=7001 --daemon --title=egg-server-test",
+    "start": "egg-scripts start --port=8080 --daemon --title=egg-server-test",
     "stop": "egg-scripts stop"
   },
   "repository": {
