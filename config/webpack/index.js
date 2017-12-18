@@ -2,8 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const ENV_PATH = {
-  ENTRY: path.resolve(__dirname, '../../', 'static'),
-  DISTS: path.resolve(__dirname, '../../', 'dist')
+  ENTRY: path.resolve(__dirname, '../../', 'static')
 }
 
 function getEntries() {
