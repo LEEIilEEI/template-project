@@ -1,7 +1,12 @@
 ## node
 package-lock.json
-
 node_modules/
 
 ## dists
 dist/
+
+## egg
+app/public
+app/view
+logs/
+run/

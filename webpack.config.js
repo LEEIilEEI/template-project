@@ -9,7 +9,7 @@ Object.keys(webpackConfig.entry).forEach(entry => {
     title: entry,
     chunks: [entry],
     template: path.resolve(__dirname, `static/${entry}`, 'index.html'),
-    filename: path.resolve(__dirname, `dist/${entry}`, 'index.html')
+    filename: path.resolve(__dirname, `app/view/${entry}`, 'index.html')
   }))
 })
 
@@ -18,7 +18,7 @@ const webpackOptions = {
 
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'app/public')
   },
 
   plugins: []

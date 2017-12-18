@@ -4,7 +4,8 @@
   "description": "[![Build Status](https://travis-ci.org/LEEIilEEI/test-nodeinit.svg?branch=master)](https://travis-ci.org/LEEIilEEI/test-nodeinit) [![Coverage](https://codecov.io/gh/LEEIilEEI/test-nodeinit/branch/master/graph/badge.svg)](https://codecov.io/gh/LEEIilEEI/test-nodeinit) <!-- optional appveyor tst [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/LEEIilEEI/test-nodeinit?branch=master&svg=true)](https://ci.appveyor.com/project/LEEIilEEI/test-nodeinit) --> <!-- optional npm version [![NPM version](https://badge.fury.io/js/test-nodeinit.svg)](http://badge.fury.io/js/test-nodeinit) --> <!-- optional npm downloads [![npm module downloads per month](http://img.shields.io/npm/dm/test-nodeinit.svg)](https://www.npmjs.org/package/test-nodeinit) --> <!-- optional dependency status [![Dependency Status](https://david-dm.org/LEEIilEEI/test-nodeinit.svg)](https://david-dm.org/LEEIilEEI/test-nodeinit) -->",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --config webpack.config.js"
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "dev": "egg-bin dev"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,13 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "egg-bin": "^4.3.7",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.6.0"
   },
   "dependencies": {
+    "egg": "^2.1.0",
+    "egg-view-nunjucks": "^2.1.4",
     "koa": "^2.3.0"
   }
 }
