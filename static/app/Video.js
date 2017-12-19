@@ -32,12 +32,12 @@ class Video extends VideoBase {
     this.video.style.height = 'auto'
     this.video.src = resource
 
-    this.video.on = ((type, eventHandle) => {
+    this.video.on = (type, eventHandle) => {
       this.video.addEventListener(type, () => {
         eventHandle.call(this)
       })
       return this.video
-    })
+    }
 
     this.video.on('canplay', () => {
       this.play()
