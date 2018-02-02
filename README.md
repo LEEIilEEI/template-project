@@ -18,5 +18,3 @@
 1. init script
 2. code style
 3. ...
-
-炮姐万岁!
