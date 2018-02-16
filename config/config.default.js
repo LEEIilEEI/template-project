@@ -6,4 +6,4 @@ exports.view = {
   mapping: {
     '.html': 'nunjucks',
   },
-};
+}

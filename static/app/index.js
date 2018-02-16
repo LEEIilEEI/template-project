@@ -1,3 +1,6 @@
+import './styles/index.css'
+import test from './images/test.jpg'
+
 import Video from './Video'
 
 const v = new Video({
