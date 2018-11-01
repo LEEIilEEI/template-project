@@ -1,8 +1,11 @@
 const path = require('path')
 const fs = require('fs')
 
+const STATIC_PATH = path.resolve(__dirname, '../../', 'static')
+const ENTRY_PATH = path.resolve(__dirname, STATIC_PATH)
+
 const ENV_PATH = {
-  ENTRY: path.resolve(__dirname, '../../', 'static')
+  ENTRY: ENTRY_PATH
 }
 
 function getEntries() {
@@ -10,7 +13,11 @@ function getEntries() {
   const temp = {}
 
   apps.forEach(app => {
-    const files = fs.readdirSync(path.resolve(__dirname, ENV_PATH.ENTRY, app))
+    const realPath = path.resolve(ENTRY_PATH, app)
+    // if not a dir
+    if (!fs.statSync(realPath).isDirectory()) return
+
+    const files = fs.readdirSync(realPath)
 
     files.filter(file => {
       return /\index\.js$/i.test(file)

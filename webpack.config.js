@@ -9,7 +9,7 @@ Object.keys(webpackConfig.entry).forEach(entry => {
   htmlPlugin.push(new HtmlWebpackPlugin({
     title: entry,
     chunks: [entry],
-    template: path.resolve(__dirname, `static`, 'index.html'),
+    template: path.resolve(__dirname, `static/${entry}`, 'index.html'),
     filename: path.resolve(__dirname, `app/view/${entry}`, 'index.html')
   }))
 })
