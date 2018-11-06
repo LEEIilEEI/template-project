@@ -10,3 +10,7 @@ app/public
 app/view
 logs/
 run/
+
+## static
+static/app-main
+static/test-server
